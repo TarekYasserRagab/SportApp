@@ -45,7 +45,6 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource,
         navigationController?.pushViewController(leguesVC, animated: true)
     }
 }
-
 extension ViewController
 {
     func postSuccessHomeView(sports: [Sport]) {

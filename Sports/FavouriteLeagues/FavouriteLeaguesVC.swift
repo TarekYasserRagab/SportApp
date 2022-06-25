@@ -88,16 +88,3 @@ extension FavouriteLeaguesVC: DeletionDelegate{
         }
     }
 }
-
-func openURLFav(_ urlString: String) {
-    guard let url = URL(string: urlString) else {
-        return
-    }
-    UIApplication.shared.open(url, completionHandler: { success in
-        if success {
-            print("opened")
-        } else {
-            print("failed")
-        }
-    })
-}

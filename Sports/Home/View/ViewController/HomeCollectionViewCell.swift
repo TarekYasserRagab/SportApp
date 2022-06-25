@@ -20,7 +20,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
     func setUpcell(item: Sport)
     {
         sportName.text = item.strSport
-        sportImage.loadFrom(URLAddress: item.strSportThumb)
+        sportImage.loadFrom(URLAddress: item.strSportThumb ?? "")
     }
 }
 

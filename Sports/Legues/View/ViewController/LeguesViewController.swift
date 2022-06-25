@@ -25,32 +25,12 @@ class LeguesViewController: UIViewController, LeguesView {
         tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "LeguesCell")
         let leaguesPresenter: LeguesPresenter = LeguesPresenterImplemntation(view: self)
         leaguesPresenter.fetchData(endPoint: "search_all_leagues.php?s=\(nameSport ?? "")")
-    }
+        }
 }
 
 extension LeguesViewController: UITableViewDelegate, UITableViewDataSource
 {
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        for item in leguesaArray{
-//            if item.strSport == nameSport {
-//                leaguesAraayPrint.append(item)
-//                tableView.reloadData()
-//            }else{
-//                let alert = UIAlertController(title: "Alert", message: "No Data", preferredStyle: .alert)
-//
-//                     let ok = UIAlertAction(title: "OK", style: .default, handler: { action in
-//                         self.navigationController?.popViewController(animated: true)
-//                     })
-//                    alert.addAction(ok)
-//                     DispatchQueue.main.async(execute: {
-//                        self.present(alert, animated: true)
-//                        self.tableView.reloadData()
-//                })
-//
-//            }
-//        }
-//    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -60,8 +40,6 @@ extension LeguesViewController: UITableViewDelegate, UITableViewDataSource
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LeguesCell", for: indexPath) as! TableViewCell
-        
-       
         cell.setUpCell(item: leguesaArray[indexPath.row])
         return cell
     }

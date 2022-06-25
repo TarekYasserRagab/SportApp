@@ -13,9 +13,10 @@ struct SportModel: Codable {
 }
 
 struct Sport: Codable {
-    let idSport, strSport: String
-    let strFormat: String
-    let strSportThumb: String
-    let strSportIconGreen: String
-    let strSportDescription: String
+    let idSport, strSport: String?
+    let strFormat: String?
+    let strSportThumb: String?
+    let strSportIconGreen: String?
+    let strSportDescription: String?
+    let strLeague: String?
 }
